@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="tui-header">LazyShine持续更新：
+    <text class="tui-current">历史活动</text>
+  </view>
+  <view class="tui-template">
+    <tui-time-axis>
+      <tui-timeaxis-item wx:for="{{stepList}}" wx:key="{{index}}">
+        <view slot="node" class="tui-node">
+          <tui-icon name="{{index==0?'satisfied':'circle-fill'}}" color="{{'#5c8dff'}}" size="18"></tui-icon>
+        </view>
+        <view slot="content">
+          <view class="tui-content-template {{'tui-template-gray'}}" data-index="{{index}}">
+            <view class="tui-version-date">{{item.title}}</view>
+            <view wx:key="{{index}}">{{'姓名：'+item.name+'\n'+'班级号：'+item.classNum+'\n'+'学号：'+item.learnNum+'\n'+'手机号：'+item.mobile+'\n'+'辅导员：'+item.fudaoyuan+'\n'+'活动方：'+item.publish+'\n'+'发布时间：'+item.pubdate+'\n'+'结束时间：'+item.enddate+'\n'+'所属板块：'+item.plate+'\n'+'活动分数：'+item.score}}</view>
+          </view>
+        </view>
+      </tui-timeaxis-item>
+    </tui-time-axis>
+  </view>
+
+</view>

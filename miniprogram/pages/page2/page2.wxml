@@ -1,0 +1,22 @@
+<!-- for 循环 wx:for -->
+<view wx:if="{{!searching}}" class="container">
+    <view class="header">
+        <view class='box' bind:tap="onSearching">
+            <image src="/images/icon/search.png" />
+            <text>搜索活动</text>
+        </view>
+    </view>
+    <view class="sub-container">
+        <image class="head-img" src="/images/activity/quality.png" />
+        <view class="activitys-container">
+            <block wx:key="id" wx:for="{{activitys}}">
+                <v-activity activity="{{item}}" />
+            </block>
+        </view>
+        <view class="containers">
+        <tui-fab left="{{left}}" right="{{right}}" bottom="{{bottom}}" bgColor="{{bgColor}}" btnList="{{btnList}}" bind:click="onClick"></tui-fab>
+      </view>
+    </view>
+</view>
+
+<v-search more="{{more}}" bind:cancel="onCancel" wx:if="{{searching}}" />

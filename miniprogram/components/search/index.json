@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-tag": "/components/tag/index",
+    "v-activity":"/components/activity/index",
+    "v-loading":"/components/loading/index"
+  }
+}

@@ -1,0 +1,86 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动名称</view>
+        <input placeholder-class="phcolor" class="tui-input" name="title" placeholder="请输入名称" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">举办方</view>
+        <input placeholder-class="phcolor" class="tui-input" name="pubulisher" placeholder="请输入举办方" maxlength="50" type="number" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">承办方</view>
+        <input placeholder-class="phcolor" class="tui-input" name="author" placeholder="请输入承办方" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动分值</view>
+        <input placeholder-class="phcolor" class="tui-input" name="score" placeholder="请输入活动分值" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动简介</view>
+        <input placeholder-class="phcolor" class="tui-input" name="summary" placeholder="请输入活动简介" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">联系方式</view>
+        <input placeholder-class="phcolor" class="tui-input" name="QQNum" placeholder="请输入联系方式" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">确认联系方式</view>
+        <input placeholder-class="phcolor" class="tui-input" name="QQNum2" placeholder="确认联系方式" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">开始时间</view>
+        <input placeholder-class="phcolor" class="tui-input" name="pubdate" placeholder="请输入开始时间" maxlength="50" type="number" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" last="{{true}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">结束时间</view>
+        <input placeholder-class="phcolor" class="tui-input" name="enddate" placeholder="结束时间" maxlength="50" type="digit" />
+      </view>
+    </tui-list-cell>
+    <radio-group name="sex">
+      <label class="tui-radio">
+        <radio value="1" color="#5677fc" />社团
+      </label>
+      <label class="tui-radio">
+        <radio value="2" color="#5677fc" />体育
+      </label>
+      <label class="tui-radio">
+        <radio value="3" color="#5677fc" />艺术
+      </label>
+      <label class="tui-radio">
+        <radio value="4" color="#5677fc" />书院
+      </label>
+    </radio-group>
+    <view class="container">
+      <view class="header">
+        <view class="title">官方海报</view>
+        <view class="sub-title">图片上传，以第一张为主要展示，其次为可修改对象展示</view>
+      </view>
+      <view class="tui-box-upload">
+        <tui-upload serverUrl="{{serverUrl}}" bind:complete="result" bind:remove="remove"></tui-upload>
+      </view>
+    </view>
+    <view class="tui-tips">暂且只支持这些数据！</view>
+    <view class="tui-btn-box">
+      <button class="btn-primary" hover-class="btn-hover" formType="submit" type="primary">Submit</button>
+      <button class="btn-primary btn-gray" hover-class="btn-gray-hover" formType="reset">Reset</button>
+    </view>
+  </form>
+</view>

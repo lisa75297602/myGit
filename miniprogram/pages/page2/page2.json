@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "v-activity": "/components/activity/index",
+    "v-search": "/components/search/index",
+    "tui-button": "/components/button/button",
+    "tui-fab": "/components/tui-fab/tui-fab"
+  }
+}

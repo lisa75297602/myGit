@@ -1,0 +1,81 @@
+<wxs src="../../util/filter.wxs" module="util" />
+<view class="container">
+  <view class="head">
+    <image src="{{activity.image}}"></image>
+    <text class='title'>{{activity.title}}</text>
+    <text class='author'>{{activity.author}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">短评</text>
+    <text class="shadow" wx:if="{{comments==false}}">还没有短评</text>
+    <view class="comment-container">
+      <block wx:for="{{util.limit(comments, 10)}}" wx:key="content">
+        <v-tag tag-class="{{tool.highlight(index)}}" text="{{item.content}}" bind:tapping="onTap">
+          <text class="num" slot="after">{{'+'+item.nums}}</text>
+        </v-tag>
+      </block>
+    </view>
+  </view>
+  <view class="sub-container">
+    <text class="headline">活动简介</text>
+    <text class="content" decode="{{true}}">{{util.format(activity.summary)}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">活动信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>活动单位</text>
+        <text>活动时间</text>
+        <text>活动板块</text>
+        <text>分数</text>
+        <text>截止时间</text>
+      </view>
+      <view class="vertical">
+        <text>{{activity.publisher}}</text>
+        <text>{{activity.pubdate}}</text>
+        <text>{{activity.plate}}</text>
+        <text>{{activity.score}}</text>
+        <text>{{activity.enddate}}</text>
+      </view>
+      <view class="containers">
+        <tui-fab left="{{left}}" right="{{right}}" bottom="{{bottom}}" bgColor="{{bgColor}}" btnList="{{btnList}}" bind:click="onClick"></tui-fab>
+      </view>
+      
+    </view>
+<view class="tui-operation tui-top40">
+    <view class="tui-operation-left tui-col-7 tui-height-full tui-ptop-zero">
+      <!-- <input class="tui-btn-comment">发表你的ThorUI言论</input> -->
+      <input bindinput="date_set" class="tui-chat-input" placeholder='短评最多12个字'></input>
+    </view>
+    <view bind:tap="onPost" class="tui-operation-right tui-right-flex tui-col-5">
+      <view class="tui-operation-item" hover-class="tui-opcity" hover-stay-time="150">
+        <tui-icon name="add-fill" size="30" color='#444'></tui-icon>
+        <!-- <tui-badge type="danger" size="small" tui-badge-class="tui-badge-class">18</tui-badge> -->
+      </view>
+      <view class="tui-operation-item" hover-class="tui-opcity" hover-stay-time="150">
+        <tui-icon name="star" size="30" color='#444'></tui-icon>
+      </view>
+      <view class="tui-operation-item" hover-class="tui-opcity" hover-stay-time="150">
+        <tui-icon name="share" size="30" color='#444'></tui-icon>
+      </view>
+    </view>
+  </view>
+
+
+  </view>
+</view>
+<wxs module="tool">
+  var highlight = function(index) {
+    if (index == 0) {
+      return 'ex-tag1'
+    }
+    if (index == 1) {
+      return 'ex-tag2'
+    }
+    return ''
+  }
+
+  module.exports = {
+    highlight: highlight
+  }
+</wxs>

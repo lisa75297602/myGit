@@ -1,0 +1,72 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">姓名</view>
+        <input placeholder-class="phcolor" class="tui-input" name="name" placeholder="请输入姓名" maxlength="50" type="text" />
+        <radio-group class="radio-group" name="sex">
+          <label class="tui-radio">
+            <radio value="1" color="#5677fc" />男
+          </label>
+          <label class="tui-radio">
+            <radio value="2" color="#5677fc" />女
+          </label>
+        </radio-group>
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">班级号</view>
+        <input placeholder-class="phcolor" class="tui-input" name="classNum" placeholder="请输入班级号" maxlength="50" type="number" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">联系方式</view>
+        <input placeholder-class="phcolor" class="tui-input" name="mobile" placeholder="请输入手机号" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动角色</view>
+        <input placeholder-class="phcolor" class="tui-input" name="chracter" placeholder="请输入观众或者参与者" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">辅导员</view>
+        <input placeholder-class="phcolor" class="tui-input" name="fudaoyuan" placeholder="请输入辅导员姓名" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">学号</view>
+        <input placeholder-class="phcolor" class="tui-input" name="learnNum" placeholder="请输入学号" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">确认学号</view>
+        <input placeholder-class="phcolor" class="tui-input" name="learnNum2" placeholder="请输入确认学号" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动感想</view>
+        <input placeholder-class="phcolor" class="tui-input" name="emotions" placeholder="请输入活动感想" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <tui-list-cell hover="{{false}}" last="{{true}}">
+      <view class="tui-line-cell">
+        <view class="tui-title">活动建议</view>
+        <input placeholder-class="phcolor" class="tui-input" name="service" placeholder="请输入活动建议" maxlength="50" type="text" />
+      </view>
+    </tui-list-cell>
+    <view class="tui-tips">感谢你对本活动对支持！</view>
+
+    <view class="tui-btn-box">
+      <button class="btn-primary" hover-class="btn-hover" formType="submit" type="primary">提交</button>
+      <button class="btn-primary btn-gray" hover-class="btn-gray-hover" formType="reset">重置</button>
+    </view>
+  </form>
+</view>

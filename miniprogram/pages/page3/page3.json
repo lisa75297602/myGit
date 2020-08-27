@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "v-tag": "/components/tag/index",
+    "v-like": "/components/like/index",
+    "v-mask": "/components/mask/index",
+    "tui-button": "/components/button/button",
+    "tui-fab": "/components/tui-fab/tui-fab",
+    "tui-icon": "/components/icon/icon",
+    "tui-badge": "/components/badge/badge"
+  }
+}

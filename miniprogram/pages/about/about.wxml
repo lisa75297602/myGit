@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="tui-flex">
+    <view class="tui-cube-box" bindtap='log'>
+      <view class="tui-cube tui-cube-1">Lazy❤Shine</view>
+      <view class="tui-cube tui-cube-2">V{{version}}</view>
+      <view class="tui-cube tui-cube-3">Lazy❤Shine</view>
+      <view class="tui-cube tui-cube-4">V{{version}}</view>
+      <view class="tui-cube tui-cube-5">Lazy❤Shine</view>
+      <view class="tui-cube tui-cube-6">V{{version}}</view>
+    </view>
+
+  </view>
+  <view class="tui-content-box">
+    <view class="tui-content">尊敬的使用者，欢迎体验LazyShine！</view>
+    <view class="tui-content">该项目主要是采用一些基础组件的封装包括第三方组件(Thor UI)，欢迎查看
+      <text class="tui-content-email" bindtap="resume" data-text="17612831340">作者简历</text>，欢迎Watch & Use ★。</view>
+    <view class="tui-content">项目可能存在缺陷或者bug，如果您在使用过程中发现问题或者有更好的建议，可反馈给我。</view>
+    <view class="tui-content">
+      您可以通过反馈或者以下方式联系我！
+    </view>
+    <view class="tui-content tui-content-email" bindtap="copy" data-text="756095594@qq.com">QQ邮箱：756095594@qq.com</view>
+    <view class="tui-content tui-content-email" bindtap="copy" data-text="959243268">QQ交流群：959243268</view>
+    <view class="tui-footer">
+      <image src='../../images/gh_7c03c9cb768e_258.jpg' class="tui-applets" mode="widthFix"></image>
+      <view class="tui-footer-text">扫描二维码，加入LazyShine，欢迎您的到来！</view>
+    </view>
+  </view>
+</view>

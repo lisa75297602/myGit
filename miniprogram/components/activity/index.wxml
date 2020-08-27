@@ -1,0 +1,10 @@
+<view bind:tap="onTap" class="container">
+    <image src="{{activity.image}}"></image>
+    <view class="description">
+        <text class='title'>{{activity.title}}</text>
+        <text class='author'>{{activity.author}}</text>
+        <view wx:if="{{showLike}}" class='foot'>
+            <text class="footer">{{activity.fav_nums}}  喜欢</text>
+        </view>
+    </view>
+</view>
